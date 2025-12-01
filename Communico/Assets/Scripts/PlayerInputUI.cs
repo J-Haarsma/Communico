@@ -1,43 +1,70 @@
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class PlayerInputUI : MonoBehaviour
 {
-    public GameObject inputFieldPrefab;
-    public Transform inputParent;
+    [Header("UI References")]
+    public InputField teamNameField;
+    public Transform playerInputParent;
+    public GameObject playerInputPrefab;
+
     public Button addPlayerButton;
     public Button continueButton;
 
-    private List<InputField> fields = new List<InputField>();
+    private List<InputField> playerFields = new List<InputField>();
     private int maxPlayers = 5;
 
     void Start()
     {
-        AddPlayerField(); // always start with one
+        continueButton.interactable = false;
+        AddPlayerInput(); // first field by default
+        addPlayerButton.onClick.AddListener(AddPlayerInput);
     }
 
-    public void AddPlayerField()
+    void Update()
     {
-        if (fields.Count >= maxPlayers) return;
+        ValidateContinue();
+    }
 
-        GameObject newField = Instantiate(inputFieldPrefab, inputParent);
-        InputField fieldComp = newField.GetComponent<InputField>();
-        fields.Add(fieldComp);
+    void AddPlayerInput()
+    {
+        if (playerFields.Count >= maxPlayers) return;
 
-        if (fields.Count >= maxPlayers)
+        GameObject newField = Instantiate(playerInputPrefab, playerInputParent);
+        InputField input = newField.GetComponent<InputField>();
+
+        playerFields.Add(input);
+
+        if (playerFields.Count >= maxPlayers)
             addPlayerButton.gameObject.SetActive(false);
     }
 
-    public void SavePlayersAndContinue()
+    void ValidateContinue()
     {
-        List<string> names = new List<string>();
+        // Team name must exist
+        if (string.IsNullOrWhiteSpace(teamNameField.text)) { continueButton.interactable = false; return; }
 
-        foreach (var f in fields)
+        // Collect filled names
+        List<string> validPlayers = new List<string>();
+        foreach (var f in playerFields)
             if (!string.IsNullOrWhiteSpace(f.text))
-                names.Add(f.text);
+                validPlayers.Add(f.text);
 
-        TeamData.Instance.SetPlayers(names);
-        // then call next screen (you already know how)
+        // Must have at least 3 names
+        continueButton.interactable = validPlayers.Count >= 3;
+    }
+
+    public void ConfirmTeamAndContinue()
+    {
+        List<string> finalNames = new List<string>();
+        foreach (var f in playerFields)
+            if (!string.IsNullOrWhiteSpace(f.text))
+                finalNames.Add(f.text);
+
+        TeamData.Instance.teamName = teamNameField.text;
+        TeamData.Instance.RegisterPlayerList(finalNames); // important!
+
+        PageSwitchManager.Instance.ShowNext(); // now InstructorSelectUI opens
     }
 }
