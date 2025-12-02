@@ -4,12 +4,15 @@ using UnityEngine.UI;
 public class PanelNavigator : MonoBehaviour
 {
     [Header("Next panel settings")]
-    public GameObject nextPanel;     // optional – manually chosen next screen
+    public GameObject nextPanel;
     public bool autoAdvance = false;
     public float autoDelay = 3f;
 
     [Header("Button advance")]
-    public Button advanceButton;   // optional button to go next
+    public Button advanceButton;
+
+    [Header("Back button settings")]
+    public Button backButton;
 
     void OnEnable()
     {
@@ -18,12 +21,18 @@ public class PanelNavigator : MonoBehaviour
 
         if (advanceButton != null)
             advanceButton.onClick.AddListener(GoNext);
+
+        if (backButton != null)
+            backButton.onClick.AddListener(GoBack);
     }
 
     void OnDisable()
     {
         if (advanceButton != null)
             advanceButton.onClick.RemoveListener(GoNext);
+
+        if (backButton != null)
+            backButton.onClick.RemoveListener(GoBack);
 
         CancelInvoke();
     }
@@ -34,5 +43,10 @@ public class PanelNavigator : MonoBehaviour
             PageSwitchManager.Instance.ShowPage(nextPanel);
         else
             PageSwitchManager.Instance.ShowNext();
+    }
+
+    public void GoBack()
+    {
+        PageSwitchManager.Instance.ShowPrevious();
     }
 }

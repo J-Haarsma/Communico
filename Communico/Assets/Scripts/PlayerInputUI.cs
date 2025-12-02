@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;   // << nodig voor nieuwe Input System
 using System.Collections.Generic;
 
 public class PlayerInputUI : MonoBehaviour
@@ -18,43 +20,77 @@ public class PlayerInputUI : MonoBehaviour
     void Start()
     {
         continueButton.interactable = false;
-        AddPlayerInput(); // first field by default
+
+        AddPlayerInput(); // eerste veld standaard
         addPlayerButton.onClick.AddListener(AddPlayerInput);
     }
 
     void Update()
     {
+        HandleTabAddPlayer();   // << toegevoegd (Input System versie)
         ValidateContinue();
     }
 
+    // ADD PLAYER INPUT FIELD
     void AddPlayerInput()
     {
-        if (playerFields.Count >= maxPlayers) return;
+        if (playerFields.Count >= maxPlayers)
+            return;
 
-        GameObject newField = Instantiate(playerInputPrefab, playerInputParent);
-        InputField input = newField.GetComponent<InputField>();
+        GameObject newFieldObj = Instantiate(playerInputPrefab, playerInputParent);
+        InputField input = newFieldObj.GetComponent<InputField>();
 
         playerFields.Add(input);
 
+        // hide add button if max reached
         if (playerFields.Count >= maxPlayers)
             addPlayerButton.gameObject.SetActive(false);
+
+        // Auto-focus het nieuwe veld
+        EventSystem.current.SetSelectedGameObject(newFieldObj);
+        input.ActivateInputField();
     }
 
+    // TAB HANDLING (Input System)
+    void HandleTabAddPlayer()
+    {
+        if (Keyboard.current == null)
+            return;
+
+        // Kijk of Tab deze frame ingedrukt werd
+        if (Keyboard.current.tabKey.wasPressedThisFrame)
+        {
+            GameObject selected = EventSystem.current.currentSelectedGameObject;
+
+            // Tab werkt alleen als je in een bestaand inputfield zit
+            if (selected != null && selected.GetComponent<InputField>() != null)
+            {
+                AddPlayerInput();
+            }
+        }
+    }
+
+    // CONTINUE BUTTON VALIDATION
     void ValidateContinue()
     {
-        // Team name must exist
-        if (string.IsNullOrWhiteSpace(teamNameField.text)) { continueButton.interactable = false; return; }
+        // Teamname verplicht
+        if (string.IsNullOrWhiteSpace(teamNameField.text))
+        {
+            continueButton.interactable = false;
+            return;
+        }
 
-        // Collect filled names
+        // Verzamel ingevulde namen
         List<string> validPlayers = new List<string>();
         foreach (var f in playerFields)
             if (!string.IsNullOrWhiteSpace(f.text))
                 validPlayers.Add(f.text);
 
-        // Must have at least 3 names
+        // Minimaal 3 spelers
         continueButton.interactable = validPlayers.Count >= 3;
     }
 
+    // SAVE & CONTINUE
     public void ConfirmTeamAndContinue()
     {
         List<string> finalNames = new List<string>();
@@ -63,8 +99,9 @@ public class PlayerInputUI : MonoBehaviour
                 finalNames.Add(f.text);
 
         TeamData.Instance.teamName = teamNameField.text;
-        TeamData.Instance.RegisterPlayerList(finalNames); // important!
+        TeamData.Instance.RegisterPlayerList(finalNames);
 
-        PageSwitchManager.Instance.ShowNext(); // now InstructorSelectUI opens
+        PageSwitchManager.Instance.ShowNext();
     }
 }
+
