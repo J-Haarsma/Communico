@@ -42,27 +42,60 @@ public class PageSwitchManager : MonoBehaviour
             ShowPage(0, true);
     }
 
+    // public void ShowPage(GameObject page)
+    // {
+    //     int idx = pages.IndexOf(page);
+    //     if (idx >= 0)
+    //         ShowPage(idx);
+    //     else
+    //         Debug.LogWarning("PageSwitchManager: Page not found in canvas children");
+    // }
+
+    // public void ShowPage(int index, bool instant = false)
+    // {
+    //     if (index < 0 || index >= pages.Count)
+    //         return;
+
+    //     if (currentIndex >= 0 && currentIndex < pages.Count)
+    //         pages[currentIndex].SetActive(false);
+
+    //     pages[index].SetActive(true);
+
+    //     currentIndex = index;
+    // }
+
     public void ShowPage(GameObject page)
+{
+    int idx = pages.IndexOf(page);
+    if (idx >= 0)
     {
-        int idx = pages.IndexOf(page);
-        if (idx >= 0)
-            ShowPage(idx);
-        else
-            Debug.LogWarning("PageSwitchManager: Page not found in canvas children");
+        Debug.Log($"[PageSwitchManager] ShowPage(page) called → index {idx}, page {page.name}");
+        ShowPage(idx);
+    }
+    else
+    {
+        Debug.LogWarning($"[PageSwitchManager] Page not found in canvas children: {page.name}");
+    }
+}
+
+public void ShowPage(int index, bool instant = false)
+{
+    if (index < 0 || index >= pages.Count)
+    {
+        Debug.LogWarning($"[PageSwitchManager] Invalid index {index}");
+        return;
     }
 
-    public void ShowPage(int index, bool instant = false)
-    {
-        if (index < 0 || index >= pages.Count)
-            return;
+    Debug.Log($"[PageSwitchManager] Activating page index {index}: {pages[index].name}");
 
-        if (currentIndex >= 0 && currentIndex < pages.Count)
-            pages[currentIndex].SetActive(false);
+    if (currentIndex >= 0 && currentIndex < pages.Count)
+        pages[currentIndex].SetActive(false);
 
-        pages[index].SetActive(true);
+    pages[index].SetActive(true);
 
-        currentIndex = index;
-    }
+    currentIndex = index;
+}
+
 
     public void ShowNext()
     {

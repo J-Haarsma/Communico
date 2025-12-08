@@ -37,13 +37,28 @@ public class PanelNavigator : MonoBehaviour
         CancelInvoke();
     }
 
+    // public void GoNext()
+    // {
+    //     if (nextPanel != null)
+    //         PageSwitchManager.Instance.ShowPage(nextPanel);
+    //     else
+    //         PageSwitchManager.Instance.ShowNext();
+    // }
+
     public void GoNext()
+{
+    if (nextPanel != null)
     {
-        if (nextPanel != null)
-            PageSwitchManager.Instance.ShowPage(nextPanel);
-        else
-            PageSwitchManager.Instance.ShowNext();
+        Debug.Log($"[PanelNavigator] {gameObject.name} GoNext → explicit nextPanel: {nextPanel.name}");
+        PageSwitchManager.Instance.ShowPage(nextPanel);
     }
+    else
+    {
+        Debug.Log($"[PanelNavigator] {gameObject.name} GoNext → using ShowNext()");
+        PageSwitchManager.Instance.ShowNext();
+    }
+}
+
 
     public void GoBack()
     {
