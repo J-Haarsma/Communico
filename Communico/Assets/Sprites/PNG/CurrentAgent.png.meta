@@ -1,0 +1,572 @@
+fileFormatVersion: 2
+guid: 2440c9952cbe6de4d979782a5891cf3d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7601784801860042271
+    second: CurrentAgent_0
+  - first:
+      213: 448075147852695743
+    second: CurrentAgent_1
+  - first:
+      213: 7317725889909746831
+    second: CurrentAgent_2
+  - first:
+      213: -8709526686329053795
+    second: CurrentAgent_3
+  - first:
+      213: 3504786089891878081
+    second: CurrentAgent_4
+  - first:
+      213: 5085302611137202211
+    second: CurrentAgent_5
+  - first:
+      213: -1872076813896515665
+    second: CurrentAgent_6
+  - first:
+      213: -8944680876130532157
+    second: CurrentAgent_7
+  - first:
+      213: -433436174873659996
+    second: CurrentAgent_8
+  - first:
+      213: 3298616031837425694
+    second: CurrentAgent_9
+  - first:
+      213: -4435473082234936756
+    second: CurrentAgent_10
+  - first:
+      213: 2544943733721977206
+    second: CurrentAgent_11
+  - first:
+      213: 5985865439434288029
+    second: CurrentAgent_12
+  - first:
+      213: -4066766802647117630
+    second: CurrentAgent_13
+  - first:
+      213: 1786793832754707735
+    second: CurrentAgent_14
+  - first:
+      213: 4670230801473429683
+    second: CurrentAgent_15
+  - first:
+      213: 8475336418412217135
+    second: CurrentAgent_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CurrentAgent_0
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 21
+        width: 42
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e14b2aaff8018690800000000000000
+      internalID: -7601784801860042271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CurrentAgent_1
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 21
+        width: 48
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb8c07419f1e73600800000000000000
+      internalID: 448075147852695743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CurrentAgent_2
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 22
+        width: 40
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8cefb70de8cd8560800000000000000
+      internalID: 7317725889909746831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CurrentAgent_3
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 22
+        width: 40
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9d5293bf9b812780800000000000000
+      internalID: -8709526686329053795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CurrentAgent_4
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 21
+        width: 42
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c45cbd216083a030800000000000000
+      internalID: 3504786089891878081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CurrentAgent_5
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 22
+        width: 47
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 328033028cf929640800000000000000
+      internalID: 5085302611137202211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CurrentAgent_6
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 21
+        width: 43
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faff3737e0c0506e0800000000000000
+      internalID: -1872076813896515665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CurrentAgent_7
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 21
+        width: 50
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c48205522c1ed380800000000000000
+      internalID: -8944680876130532157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CurrentAgent_8
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 21
+        width: 44
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a5f9db68102cf9f0800000000000000
+      internalID: -433436174873659996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CurrentAgent_9
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 22
+        width: 47
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e10141cddc907cd20800000000000000
+      internalID: 3298616031837425694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CurrentAgent_10
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 22
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c42649a5bb80272c0800000000000000
+      internalID: -4435473082234936756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CurrentAgent_11
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 4
+        width: 42
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 671dad597d4715320800000000000000
+      internalID: 2544943733721977206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CurrentAgent_12
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 21
+        width: 42
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9ba4c617e0121350800000000000000
+      internalID: 5985865439434288029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CurrentAgent_13
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 22
+        width: 47
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c01edfb321ff87c0800000000000000
+      internalID: -4066766802647117630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CurrentAgent_14
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 21
+        width: 43
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71df3382687fbc810800000000000000
+      internalID: 1786793832754707735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CurrentAgent_15
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 47
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b069e48b2effc040800000000000000
+      internalID: 4670230801473429683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CurrentAgent_16
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 21
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f23446b71917e9570800000000000000
+      internalID: 8475336418412217135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      CurrentAgent_0: -7601784801860042271
+      CurrentAgent_1: 448075147852695743
+      CurrentAgent_10: -4435473082234936756
+      CurrentAgent_11: 2544943733721977206
+      CurrentAgent_12: 5985865439434288029
+      CurrentAgent_13: -4066766802647117630
+      CurrentAgent_14: 1786793832754707735
+      CurrentAgent_15: 4670230801473429683
+      CurrentAgent_16: 8475336418412217135
+      CurrentAgent_2: 7317725889909746831
+      CurrentAgent_3: -8709526686329053795
+      CurrentAgent_4: 3504786089891878081
+      CurrentAgent_5: 5085302611137202211
+      CurrentAgent_6: -1872076813896515665
+      CurrentAgent_7: -8944680876130532157
+      CurrentAgent_8: -433436174873659996
+      CurrentAgent_9: 3298616031837425694
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

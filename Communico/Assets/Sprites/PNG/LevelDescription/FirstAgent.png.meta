@@ -1,0 +1,754 @@
+fileFormatVersion: 2
+guid: 3c034450e6b918f439c3931981af309b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4564735108260532488
+    second: Level description-08_0
+  - first:
+      213: -8497048404933331568
+    second: Level description-08_1
+  - first:
+      213: 2520430601354082428
+    second: Level description-08_2
+  - first:
+      213: 6752817511077353653
+    second: Level description-08_3
+  - first:
+      213: 3118055591810267982
+    second: Level description-08_4
+  - first:
+      213: 8302367814955583259
+    second: Level description-08_5
+  - first:
+      213: -8283065622547667260
+    second: Level description-08_6
+  - first:
+      213: 4046229321267821283
+    second: Level description-08_7
+  - first:
+      213: -6236195446242821457
+    second: Level description-08_8
+  - first:
+      213: -2817314253775294214
+    second: Level description-08_9
+  - first:
+      213: 9119580111157242220
+    second: Level description-08_10
+  - first:
+      213: 3023640444010556196
+    second: Level description-08_11
+  - first:
+      213: 2196309381234823134
+    second: Level description-08_12
+  - first:
+      213: 814968959204325810
+    second: Level description-08_13
+  - first:
+      213: -5840506776003638332
+    second: Level description-08_14
+  - first:
+      213: -9025727373506122324
+    second: Level description-08_15
+  - first:
+      213: -3083665856768509825
+    second: Level description-08_16
+  - first:
+      213: 2270783619646104866
+    second: Level description-08_17
+  - first:
+      213: 1089359039188591857
+    second: Level description-08_18
+  - first:
+      213: 8480228337411067153
+    second: Level description-08_19
+  - first:
+      213: -7871905143918866176
+    second: Level description-08_20
+  - first:
+      213: -2515444944996566927
+    second: Level description-08_21
+  - first:
+      213: -7581524893428551337
+    second: Level description-08_22
+  - first:
+      213: -2869135511023910489
+    second: Level description-08_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Level description-08_0
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 20
+        width: 38
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8019f9d5562395f30800000000000000
+      internalID: 4564735108260532488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level description-08_1
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 21
+        width: 39
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09536a8be7b641a80800000000000000
+      internalID: -8497048404933331568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level description-08_2
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 20
+        width: 43
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c78fbb2374e5af220800000000000000
+      internalID: 2520430601354082428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level description-08_3
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 21
+        width: 46
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b89dc49fb3d6bd50800000000000000
+      internalID: 6752817511077353653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level description-08_4
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 66
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4b75c36a0f854b20800000000000000
+      internalID: 3118055591810267982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level description-08_5
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 20
+        width: 43
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1740153a8fe73370800000000000000
+      internalID: 8302367814955583259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level description-08_6
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 20
+        width: 50
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c6ebcca3b3ac0d80800000000000000
+      internalID: -8283065622547667260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level description-08_7
+      rect:
+        serializedVersion: 2
+        x: 1306
+        y: 21
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ea30fd3128172830800000000000000
+      internalID: 4046229321267821283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level description-08_8
+      rect:
+        serializedVersion: 2
+        x: 1517
+        y: 20
+        width: 43
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faab9cc48459479a0800000000000000
+      internalID: -6236195446242821457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level description-08_9
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 20
+        width: 42
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af0341bec93e6e8d0800000000000000
+      internalID: -2817314253775294214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level description-08_10
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 20
+        width: 42
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c69ae322bc14f8e70800000000000000
+      internalID: 9119580111157242220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level description-08_11
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 20
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42be0c1c6f026f920800000000000000
+      internalID: 3023640444010556196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level description-08_12
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 3
+        width: 47
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edf0c55eebbda7e10800000000000000
+      internalID: 2196309381234823134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level description-08_13
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 20
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b9f75453f95f4b00800000000000000
+      internalID: 814968959204325810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level description-08_14
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 20
+        width: 48
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cb8a04180a52fea0800000000000000
+      internalID: -5840506776003638332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level description-08_15
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 21
+        width: 40
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cade5ae26cc2eb280800000000000000
+      internalID: -9025727373506122324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level description-08_16
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 21
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f78ff41cd3e9435d0800000000000000
+      internalID: -3083665856768509825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level description-08_17
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 21
+        width: 40
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22528c2cba1738f10800000000000000
+      internalID: 2270783619646104866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level description-08_18
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 19
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f462b3464e2e1f00800000000000000
+      internalID: 1089359039188591857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level description-08_19
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 20
+        width: 44
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11d86912eb2dfa570800000000000000
+      internalID: 8480228337411067153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level description-08_20
+      rect:
+        serializedVersion: 2
+        x: 1203
+        y: 21
+        width: 47
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 001552f8aff51c290800000000000000
+      internalID: -7871905143918866176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level description-08_21
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 3
+        width: 42
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1787d616628571dd0800000000000000
+      internalID: -2515444944996566927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level description-08_22
+      rect:
+        serializedVersion: 2
+        x: 1414
+        y: 20
+        width: 42
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 751f86f274309c690800000000000000
+      internalID: -7581524893428551337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level description-08_23
+      rect:
+        serializedVersion: 2
+        x: 1464
+        y: 21
+        width: 47
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a106fc3478ce28d0800000000000000
+      internalID: -2869135511023910489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Level description-08_0: 4564735108260532488
+      Level description-08_1: -8497048404933331568
+      Level description-08_10: 9119580111157242220
+      Level description-08_11: 3023640444010556196
+      Level description-08_12: 2196309381234823134
+      Level description-08_13: 814968959204325810
+      Level description-08_14: -5840506776003638332
+      Level description-08_15: -9025727373506122324
+      Level description-08_16: -3083665856768509825
+      Level description-08_17: 2270783619646104866
+      Level description-08_18: 1089359039188591857
+      Level description-08_19: 8480228337411067153
+      Level description-08_2: 2520430601354082428
+      Level description-08_20: -7871905143918866176
+      Level description-08_21: -2515444944996566927
+      Level description-08_22: -7581524893428551337
+      Level description-08_23: -2869135511023910489
+      Level description-08_3: 6752817511077353653
+      Level description-08_4: 3118055591810267982
+      Level description-08_5: 8302367814955583259
+      Level description-08_6: -8283065622547667260
+      Level description-08_7: 4046229321267821283
+      Level description-08_8: -6236195446242821457
+      Level description-08_9: -2817314253775294214
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
