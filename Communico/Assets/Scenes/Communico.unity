@@ -3745,7 +3745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ba67442b5854d241969eef35f3bb849, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PanelNavigator
-  nextPanel: {fileID: 1595038530}
+  nextPanel: {fileID: 720643087}
   autoAdvance: 0
   autoDelay: 3
   advanceButton: {fileID: 542418902}
