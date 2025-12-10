@@ -16094,6 +16094,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1263731679}
   - component: {fileID: 1263731680}
+  - component: {fileID: 1263731681}
   m_Layer: 0
   m_Name: PhotoManager
   m_TagString: Untagged
@@ -16132,6 +16133,36 @@ MonoBehaviour:
   - {fileID: 559547869}
   - {fileID: 1782283436}
   - {fileID: 2119406120}
+  - {fileID: 432141275}
+  - {fileID: 864480675}
+  photoSlots:
+  - {fileID: 1316538716}
+  - {fileID: 16769311}
+  - {fileID: 277228304}
+  - {fileID: 690694171}
+  - {fileID: 1845412636}
+  combinedPhotoSlots:
+  - {fileID: 1223716122}
+  - {fileID: 1078808193}
+  - {fileID: 806130762}
+  - {fileID: 1647939455}
+  - {fileID: 1447371560}
+--- !u!114 &1263731681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263731678}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cdd265de07940e4597ab044dd32199a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  liveCameraPanels:
+  - {fileID: 559547869}
+  - {fileID: 1782283436}
+  - {fileID: 1782283436}
   - {fileID: 432141275}
   - {fileID: 864480675}
   photoSlots:
