@@ -3,16 +3,14 @@ import AVFoundation
 import Vision
 import UIKit
 
-@objc public class PersonSegmentation : NSObject
-{
+@objc public class PersonSegmentation: NSObject {
 
     static let shared = PersonSegmentation()
 
     private var session: AVCaptureSession?
     private var photoOutput: AVCapturePhotoOutput?
 
-    override init()
-    {
+    override init() {
         super.init()
 
         NotificationCenter.default.addObserver(
@@ -23,14 +21,12 @@ import UIKit
         )
     }
 
-    @objc func handleCaptureRequest(_ n: Notification)
-    {
+    @objc func handleCaptureRequest(_ n: Notification) {
         let index = (n.userInfo?["index"] as? Int) ?? 0
         capture(index: index)
     }
 
-    func ensureSession()
-    {
+    func ensureSession() {
         if session != nil { return }
 
         let s = AVCaptureSession()
@@ -55,94 +51,96 @@ import UIKit
     }
 
     func capture(index: Int) {
-            ensureSession()
+        ensureSession()
 
         guard let output = photoOutput else { return }
 
-            let settings = AVCapturePhotoSettings()
+        let settings = AVCapturePhotoSettings()
         settings.isHighResolutionPhotoEnabled = true
 
         output.capturePhoto(with: settings,
-                            delegate: PhotoHandler(index: index))
+                           delegate: PhotoHandler(index: index))
     }
+}
+
+// ----------------------------------------------------------
+// MARK: - AVCapture Delegate
+// ----------------------------------------------------------
+
+class PhotoHandler: NSObject, AVCapturePhotoCaptureDelegate {
+
+    let index: Int
+
+    init(index: Int) {
+        self.index = index
     }
 
-    class PhotoHandler : NSObject, AVCapturePhotoCaptureDelegate
-    {
-        let index: Int
+    func photoOutput(_ output: AVCapturePhotoOutput,
+                     didFinishProcessingPhoto photo: AVCapturePhoto,
+                     error: Error?) {
 
-        init(index: Int)
-        { self.index = index }
+        guard let cgImage = photo.cgImageRepresentation() else { return }
 
-        @objc
-        func photoOutput(_ output: AVCapturePhotoOutput,
-                         didFinishProcessingPhoto photo: AVCapturePhoto,
-                         error: Error?)
-        {
+        let uiImage = UIImage(cgImage: cgImage)
 
-            guard let cg = photo.cgImageRepresentation() else { return }
-
-            let uiImage = UIImage(cgImage: cg)
-    
+        // Vision person segmentation request
         let request = VNGeneratePersonSegmentationRequest()
-            request.outputPixelFormat = kCVPixelFormatType_OneComponent8
-    
-        let handler = VNImageRequestHandler(cgImage: uiImage.cgImage!,
-                                            options: [:])
+        request.outputPixelFormat = kCVPixelFormatType_OneComponent8
 
-        var pngData: Data ? = nil
-    
-        if let _ = try? handler.perform([request]),
+        let handler = VNImageRequestHandler(cgImage: uiImage.cgImage!, options: [:])
+
+        var pngData: Data? = nil
+
+        if (try? handler.perform([request])) != nil,
            let result = request.results?.first as? VNPixelBufferObservation,
-           let maskedPNG = Self.applyMask(base: uiImage,
-                                          mask: result.pixelBuffer) {
-                pngData = maskedPNG
-        } else
-            {
-                pngData = uiImage.pngData()
+           let maskedPNG = Self.applyMask(base: uiImage, mask: result.pixelBuffer) {
+            pngData = maskedPNG
+        } else {
+            pngData = uiImage.pngData()
         }
 
-            guard let data = pngData else { return }
+        guard let finalData = pngData else { return }
 
-            let b64 = data.base64EncodedString()
+        let b64 = finalData.base64EncodedString()
         let message = "\(index)|\(b64)"
 
-        message.withCString {
-                cString in
-            "MultiCameraFeed2".withCString {
-                    obj in
-                "OnPhotoReadyIOS".withCString {
-                        method in
+        // Send result back to Unity
+        message.withCString { cString in
+            "MultiCameraFeed2".withCString { obj in
+                "OnPhotoReadyIOS".withCString { method in
                     UnitySendMessage(obj, method, cString)
                 }
-                }
             }
-            }
+        }
+    }
 
-    static func applyMask(base: UIImage, mask: CVPixelBuffer) -> Data ? {
-                CVPixelBufferLockBaseAddress(mask, .readOnly)
+    // Apply segmentation mask
+    static func applyMask(base: UIImage, mask: CVPixelBuffer) -> Data? {
+
+        CVPixelBufferLockBaseAddress(mask, .readOnly)
         defer { CVPixelBufferUnlockBaseAddress(mask, .readOnly) }
 
-                let context = CIContext()
+        let context = CIContext()
         let baseCI = CIImage(cgImage: base.cgImage!)
         let maskCI = CIImage(cvPixelBuffer: mask)
 
+        // Composite masked image
         let composite = baseCI.applyingFilter(
             "CIBlendWithAlphaMask",
             parameters: ["inputMaskImage": maskCI]
         )
 
-        if let cg = context.createCGImage(composite,
-                                          from: composite.extent) {
-                    return UIImage(cgImage: cg).pngData()
-        }
-                return nil
-    }
+        if let cg = context.createCGImage(composite, from: composite.extent) {
+            return UIImage(cgImage: cg).pngData()
         }
 
-        // UnitySendMessage declaration
-        @_silgen_name("UnitySendMessage")
-    func UnitySendMessage(_ obj: UnsafePointer<CChar>,
-                          _ method: UnsafePointer<CChar>,
-                          _ msg: UnsafePointer<CChar>)
+        return nil
+    }
+}
+
+// UnitySendMessage declaration
+@_silgen_name("UnitySendMessage")
+func UnitySendMessage(_ obj: UnsafePointer<CChar>,
+                      _ method: UnsafePointer<CChar>,
+                      _ msg: UnsafePointer<CChar>)
 
