@@ -1808,7 +1808,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &99543471
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9152,7 +9152,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &720643088
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9199,7 +9199,7 @@ MonoBehaviour:
   nextPanel: {fileID: 337301014}
   autoAdvance: 0
   autoDelay: 3
-  advanceButton: {fileID: 728178058}
+  advanceButton: {fileID: 918894139}
   backButton: {fileID: 0}
   transitionDelay: 0.1
 --- !u!114 &720643090
@@ -9256,7 +9256,7 @@ MonoBehaviour:
   playerInputParent: {fileID: 239196867}
   playerInputPrefab: {fileID: 713902585597553724, guid: 71e6d90066915444aad438c5bd492e06, type: 3}
   addPlayerButton: {fileID: 481950772}
-  continueButton: {fileID: 728178058}
+  continueButton: {fileID: 918894139}
 --- !u!1 &726908172
 GameObject:
   m_ObjectHideFlags: 0
@@ -11376,6 +11376,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6517391487645012265, guid: b5359f9133d40de48b2976b245de5291, type: 3}
   m_PrefabInstance: {fileID: 1439320622}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &918894139 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7470599210954091170, guid: b5359f9133d40de48b2976b245de5291, type: 3}
+  m_PrefabInstance: {fileID: 1439320622}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &919278361
 GameObject:
   m_ObjectHideFlags: 0
@@ -16720,7 +16731,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1263731678}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6aa76345c5b86654096f101d8c1b9501, type: 3}
   m_Name: 
@@ -16750,7 +16761,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1263731678}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8cdd265de07940e4597ab044dd32199a, type: 3}
   m_Name: 
@@ -17862,20 +17873,28 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7470599210954091170, guid: b5359f9133d40de48b2976b245de5291, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7470599210954091170, guid: b5359f9133d40de48b2976b245de5291, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 720643089}
+      objectReference: {fileID: 720643092}
     - target: {fileID: 7470599210954091170, guid: b5359f9133d40de48b2976b245de5291, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 720643092}
     - target: {fileID: 7470599210954091170, guid: b5359f9133d40de48b2976b245de5291, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GoNext
+      value: ConfirmTeamAndContinue
       objectReference: {fileID: 0}
     - target: {fileID: 7470599210954091170, guid: b5359f9133d40de48b2976b245de5291, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: ConfirmTeamAndContinue
+      objectReference: {fileID: 0}
+    - target: {fileID: 7470599210954091170, guid: b5359f9133d40de48b2976b245de5291, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerInputUI, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7470599210954091170, guid: b5359f9133d40de48b2976b245de5291, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
