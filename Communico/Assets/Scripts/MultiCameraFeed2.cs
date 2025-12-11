@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Runtime.InteropServices;
 
-public class MultiCameraFeed2: MonoBehaviour
+public class MultiCameraFeed2 : MonoBehaviour
 {
     [Header("Live camera preview panels")]
     public RawImage[] liveCameraPanels;
@@ -18,7 +18,7 @@ public class MultiCameraFeed2: MonoBehaviour
     private Texture2D[] savedPhotos;
 
 #if UNITY_IOS
-    // Native plugin call
+    // iOS plugin functions
     [DllImport("__Internal")]
     private static extern void StartiOSCamera();
 
@@ -32,14 +32,14 @@ public class MultiCameraFeed2: MonoBehaviour
         savedPhotos = new Texture2D[maxSlots];
 
 #if UNITY_IOS
-        // iPad: use native Vision-framework camera
-        StartiOSCamera();
+        // Optional: start session (Swift plugin starts automatically)
+        // StartiOSCamera();
 #else
-        // Editor/Windows/Android fallback
-        StartUnityCamera();
+        StartUnityCamera(); // Editor/Android fallback
 #endif
     }
 
+    // Unity fallback camera preview
     void StartUnityCamera()
     {
         if (WebCamTexture.devices.Length == 0)
@@ -48,7 +48,6 @@ public class MultiCameraFeed2: MonoBehaviour
             return;
         }
 
-        // Choose BACK camera if available
         WebCamDevice? backCam = null;
         foreach (var cam in WebCamTexture.devices)
         {
@@ -60,7 +59,6 @@ public class MultiCameraFeed2: MonoBehaviour
         }
 
         string camName = backCam.HasValue ? backCam.Value.name : WebCamTexture.devices[0].name;
-
         webcam = new WebCamTexture(camName);
         webcam.Play();
 
@@ -69,6 +67,7 @@ public class MultiCameraFeed2: MonoBehaviour
                 panel.texture = webcam;
     }
 
+    // Take a photo (iOS or fallback)
     public void TakePhoto(int slotIndex)
     {
 #if UNITY_IOS
@@ -78,6 +77,7 @@ public class MultiCameraFeed2: MonoBehaviour
 #endif
     }
 
+    // Fallback photo capture for Editor/Android
     private IEnumerator CapturePhoto_Unity(int index)
     {
         yield return new WaitForEndOfFrame();
@@ -92,20 +92,23 @@ public class MultiCameraFeed2: MonoBehaviour
         AssignPhoto(index, photo);
     }
 
-    // Called from native iOS plugin (Objective-C)
+    // Called by Swift plugin via UnitySendMessage
     public void OnPhotoReadyIOS(string message)
     {
-        // message = "index|base64_png"
+        // message format: "index|base64_png"
         string[] parts = message.Split('|');
-        int index = int.Parse(parts[0]);
-        byte[] pngBytes = System.Convert.FromBase64String(parts[1]);
+        if (parts.Length != 2) return;
 
+        if (!int.TryParse(parts[0], out int index)) return;
+
+        byte[] pngBytes = System.Convert.FromBase64String(parts[1]);
         Texture2D photo = new Texture2D(2, 2, TextureFormat.ARGB32, false);
         photo.LoadImage(pngBytes);
 
         AssignPhoto(index, photo);
     }
 
+    // Assign photo to slots
     private void AssignPhoto(int index, Texture2D photo)
     {
         if (index >= 0 && index < savedPhotos.Length)
