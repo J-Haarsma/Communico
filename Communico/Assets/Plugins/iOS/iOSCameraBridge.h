@@ -4,9 +4,12 @@
 extern "C" {
 #endif
 
-void StartiOSCamera();
-void TakePhotoWithBackgroundRemovalIOS(int index);
+void StartiOSCamera(float x, float y, float width, float height);
+void UpdateCameraRect(float x, float y, float width, float height);
+void TakePhotoIOS(int index);
+void StopIOSCamera();
 
 #ifdef __cplusplus
 }
 #endif
+

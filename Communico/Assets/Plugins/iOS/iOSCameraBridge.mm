@@ -1,33 +1,21 @@
 #import "iOSCameraBridge.h"
-#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "UnityInterface.h"
 
-@interface UnityBridgeCaller : NSObject
-+ (void)startCamera;
-+ (void)takePhoto:(int)index;
-@end
+#import "UnityCameraManager-Swift.h"
 
-@implementation UnityBridgeCaller
-
-+ (void)startCamera {
-    // Swift handles session startup automatically
+void StartiOSCamera(float x, float y, float width, float height) {
+    [[UnityCameraManager shared] startCameraWithX:x y:y width:width height:height];
 }
 
-+ (void)takePhoto:(int)index {
-    // Call into Swift using NSNotification
-    [[NSNotificationCenter defaultCenter]
-        postNotificationName:@"UnityRequestPhotoCapture"
-                      object:nil
-                    userInfo:@{@"index": @(index)}];
+void UpdateCameraRect(float x, float y, float width, float height) {
+    [[UnityCameraManager shared] updateCameraRectWithX:x y:y width:width height:height];
 }
 
-@end
-
-void StartiOSCamera() {
-    [UnityBridgeCaller startCamera];
+void TakePhotoIOS(int index) {
+    [[UnityCameraManager shared] capturePhotoWithIndex:index];
 }
 
-void TakePhotoWithBackgroundRemovalIOS(int index) {
-    [UnityBridgeCaller takePhoto:index];
+void StopIOSCamera() {
+    [[UnityCameraManager shared] stopCamera];
 }
-
