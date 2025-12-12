@@ -2,7 +2,7 @@
 #import <UIKit/UIKit.h>
 #import "UnityInterface.h"
 
-#import "UnityCameraManager-Swift.h"
+#import "Communico-Swift.h"
 
 void StartiOSCamera(float x, float y, float width, float height) {
     [[UnityCameraManager shared] startCameraWithX:x y:y width:width height:height];
